@@ -1,0 +1,12 @@
+<%= form_with url: "", method: :get do |form| %>
+    <%= form.label :sort_by, "Sort by:" %>
+    <%= form.radio_button :sort, "Most" %>
+    <%= form.label :most_ingredients, "Most Ingredients"%>
+    <%= form.radio_button :sort, "Least" %>
+    <%= form.label :least_ingredients, "Least Ingredients"%>
+    <%= form.submit "Sort" %>
+<% end %>
+
+<%@recipes.each do |recipe|%> 
+    <div><%=link_to recipe.name, recipe%></div>
+<%end%>

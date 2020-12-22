@@ -1,0 +1,6 @@
+<h1><%=@recipe.name%></h1>
+<h2><%=link_to "By: #{@user.name}", @user%></h2>
+<ul><%@recipe_ingredients.each do |i| %>
+    <li><%= "#{i.ingredient.name} - #{i.amount}" %></li>
+<%end%></ul>
+<div><%=@recipe.instructions%></div>
