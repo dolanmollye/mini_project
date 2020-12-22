@@ -1,2 +1,10 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<%= form_with model: @user do |f|%>
+
+<%= f.label :name %>
+<%= f.text_field :name%><br>
+
+<%= f.label :Allergies %>
+<%= f.collection_check_boxes :ingredient_ids, @ingredients, :id, :name, include_hidden: false %><br>
+
+<%= f.submit %>
+<%end%>

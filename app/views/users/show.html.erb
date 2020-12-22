@@ -1,7 +1,11 @@
 <h1><%= @user.name %></h1>
+<div><%= link_to "Edit", edit_user_path %>
+<%= button_to "DESTROY USER", @user, :method => :delete %>
+
 <div><%= "Age: #{@user.age}" %></div>
 <div><%= "Skill: #{@user.skill_level}" %></div>
 <div><%= "About Me: #{@user.bio}" %></div>
+
 <h2>Allergies</h2>
 <ul><% @allergies.each do |allergy| %>
     <li><%= allergy.ingredient.name %></li>
